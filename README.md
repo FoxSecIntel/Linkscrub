@@ -1,5 +1,9 @@
 # LinkScrub
 
+![CI](https://img.shields.io/github/actions/workflow/status/FoxSecIntel/Linkscrub/ci.yml?branch=main&label=CI)
+![License](https://img.shields.io/github/license/FoxSecIntel/Linkscrub)
+![Latest Release](https://img.shields.io/github/v/release/FoxSecIntel/Linkscrub)
+
 Chrome extension (Manifest V3) that adds a right-click action to copy a cleaned URL without common tracking parameters.
 
 ## What it does
