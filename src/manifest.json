@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "LinkScrub",
+  "version": "1.0.0",
+  "description": "Adds a right-click option to copy a clean link without common tracking parameters.",
+  "permissions": [
+    "contextMenus",
+    "offscreen",
+    "clipboardWrite"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
