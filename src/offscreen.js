@@ -17,8 +17,12 @@ async function copyText(text) {
   }
 
   if (navigator.clipboard && navigator.clipboard.writeText) {
-    await navigator.clipboard.writeText(text);
-    return;
+    try {
+      await navigator.clipboard.writeText(text);
+      return;
+    } catch {
+      // Fallback below for environments where async clipboard is blocked.
+    }
   }
 
   const area = document.createElement("textarea");
@@ -35,6 +39,6 @@ async function copyText(text) {
   document.body.removeChild(area);
 
   if (!ok) {
-    throw new Error("execCommand copy failed.");
+    throw new Error("Clipboard copy failed in both API and fallback modes.");
   }
 }
